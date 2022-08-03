@@ -6,4 +6,6 @@ In this example, [`src/server.ts`](src/server.ts) is typed so that you can only 
 
 We can do this! All we need to do is create a 'proxy' file — [`types/proxy-server.ts`](types/proxy-server.ts) that mirrors the source code, but removes the type from the function and just types the parameter instead — along with a [`types/generated-types.ts`](types/generated-types.ts) that exports a `Data` type based on the `ReturnType` of the function in our `server.ts` file.
 
+![image](https://user-images.githubusercontent.com/1162160/182658089-9def4bea-053b-406a-b017-0c8bca4c125f.png)
+
 The next version of SvelteKit has a more sophisticated version of this process that is triggered by a file watcher. The one caveat is that you need to save the `server.ts` file in order for the proxy to be generated — until you do, there'll be a type mismatch.
