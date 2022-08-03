@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		"rootDirs": ["./src", "./types"]
+	},
+	"include": ["./src/**/*.ts", "./types/**/*.ts"]
+}
